@@ -1,0 +1,30 @@
+*{
+  margin: 0;
+  padding: 0;
+  background-position: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+html, body{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aquamarine;
+  margin: 15px;
+}
+#e{
+  color: rgb(208, 181, 99);
+  margin-right: 5px;
+}
+#Search{
+  width: 500px;
+  height: 30px;
+}
