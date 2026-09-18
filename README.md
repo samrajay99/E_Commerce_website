@@ -1,135 +1,92 @@
-# 🛒 E-Commerce Website
+# nordly - Modern E-Commerce Storefront
 
-A full-stack e-commerce web application with product listings, cart management, and checkout flow — built with the MERN stack.
+nordly is a polished, responsive e-commerce storefront built with Next.js and React. It is designed to feel like a real modern shopping experience, with product discovery, filtering, wishlist support, cart management, promotional discounts, and a checkout flow.
 
-<!-- ![demo](./screenshots/demo.gif) -->
+## Live Demo
 
-🔗 **Live Demo:** [add-your-deployed-link-here]
-📂 **Repo:** https://github.com/samrajay99/E_Commerce_website
+Run the project locally with the instructions below.
 
----
+## Features
 
-## ✨ Features
+- Responsive storefront layout for desktop, tablet, and mobile
+- Product catalog with categories, search, sorting, ratings, badges, and color swatches
+- Category navigation for Living, Workspace, Kitchen, and Travel products
+- Product wishlist with browser persistence
+- Shopping bag drawer with add, remove, and quantity controls
+- Automatic subtotal, shipping, discount, and total calculations
+- Promo code support with welcome discount logic
+- Checkout handoff modal ready for payment provider integration
+- Sticky navigation, responsive mobile menu, newsletter signup UI, and editorial content sections
+- Local cart and wishlist persistence using `localStorage`
+- Secure dependency baseline with Next.js 16 and React 19
 
-- Browse products with categories/filters
-- Product detail pages
-- Add to cart / update quantity / remove from cart
-- Checkout flow
-- User authentication (login/signup)
-- Responsive design across devices
-- (Update this list to match what you actually built — e.g. payment gateway integration, order history, admin product management)
+## Tech Stack
 
----
+- Next.js 16
+- React 19
+- TypeScript
+- Responsive CSS
+- Lucide React icons
+- Unsplash product imagery
 
-## 🛠️ Tech Stack
-
-**Frontend:** React.js, [Tailwind CSS / Bootstrap — update], Redux (if used for cart state)
-**Backend:** Node.js, Express.js
-**Database:** MongoDB
-**Auth:** [JWT — update if applicable]
-**Payments:** [Stripe / Razorpay test mode — update if applicable]
-**Other tools:** Postman, Git
-
----
-
-## 📸 Screenshots
-
-| Home / Product Grid | Product Detail | Cart & Checkout |
-|---|---|---|
-| _add screenshot_ | _add screenshot_ | _add screenshot_ |
-
----
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
-- Node.js (v18+)
-- MongoDB (local or Atlas)
+
+- Node.js 20.9 or newer
+- npm
 
 ### Installation
 
 ```bash
 git clone https://github.com/samrajay99/E_Commerce_website.git
 cd E_Commerce_website
-
-# Backend
-cd server
-npm install
-
-# Frontend
-cd ../client
 npm install
 ```
 
-### Environment Variables
-
-`server/.env`:
-```
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-PORT=5000
-# STRIPE_SECRET_KEY=your_key   (if payments integrated)
-```
-
-### Run Locally
+### Run the development server
 
 ```bash
-# Backend
-cd server
 npm run dev
+```
 
-# Frontend (separate terminal)
-cd client
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Create a production build
+
+```bash
+npm run build
 npm start
 ```
 
-Visit `http://localhost:3000`.
+## Project Structure
 
----
-
-## 📁 Folder Structure
-
-```
+```text
 E_Commerce_website/
-├── client/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── redux/          # if using Redux for cart state
-│   │   └── App.js
-├── server/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   └── server.js
-└── README.md
+├── app/
+│   ├── globals.css       # Global responsive styles
+│   ├── layout.tsx        # Root layout and metadata
+│   └── page.tsx          # Storefront UI and client interactions
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+└── tsconfig.json
 ```
 
----
+## Production Roadmap
 
-## 🗺️ API Endpoints
+The current release provides a complete storefront experience with local product data. The next backend integrations for a production launch are:
 
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/api/products` | Get all products |
-| GET | `/api/products/:id` | Get a single product |
-| POST | `/api/cart` | Add item to cart |
-| PUT | `/api/cart/:id` | Update cart item quantity |
-| DELETE | `/api/cart/:id` | Remove item from cart |
-| POST | `/api/orders` | Place an order |
+- Database-backed products, inventory, carts, and orders
+- User registration, login, and account pages
+- Admin dashboard for product and order management
+- Stripe or Razorpay payment processing
+- Order confirmation emails and delivery tracking
+- Product reviews and customer accounts
 
----
-
-## 🔮 Future Improvements
-
-- Integrate real payment gateway (Stripe/Razorpay)
-- Add order history & order tracking
-- Add admin panel for inventory management
-- Add product reviews & ratings
-
----
-
-## 👤 Author
+## Author
 
 **Samrajay Gupta**
-[LinkedIn](https://linkedin.com/in/samrajaygupta1) · [GitHub](https://github.com/samrajay99) · samrajgupta250298@gmail.com
+
+- GitHub: [@samrajay99](https://github.com/samrajay99)
+- LinkedIn: [Samrajay Gupta](https://linkedin.com/in/samrajaygupta1)
